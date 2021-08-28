@@ -1,0 +1,75 @@
+{% extends 'headerbook.html' %}
+
+{% block MyContent %}
+<br><br>
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <form action="../delete_searchapi/" method="post">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td ><h4 style="font-weight: bold;">Enter the book name to delete</h4></td>
+                            <td><input name="Bname" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit" class="btn btn-danger">Search</button></td>
+                        </tr>
+                    </table>
+                </form>
+                    {%  if data %}
+                    <form action="../delete_data/" method="post">
+                 <table class="table table-borderless table-striped">
+                  {% for i in data %}
+                  <tr>
+                      <td></td>
+                      <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+                  </tr>
+                  <tr>
+                      <td >BOOK NAME</td>
+                      <td ><input name="newBname" value="{{i.Bname}}" type="text" class="form-control"></td>
+                      
+                  </tr>
+                  <tr>
+                    <td > AUTHOR</td>
+                    <td ><input name="newAuthor" value="{{i.Author}}" type="text" class="form-control"></td>
+                    
+                </tr>
+                <tr>
+                    <td >DESCRIPTION</td>
+                    <td ><input name="newDes" value="{{i.Des}}" type="text" class="form-control"></td>
+                    
+                </tr>
+                <tr>
+                    <td >PRICE</td>     
+                    <td ><input name="newPrice" value="{{i.Price}}" type="text" class="form-control"></td>
+                      </tr>
+                      
+                
+                <tr>
+                   
+                    <td >CATEGORY</td>
+                    <td ><input name="newCategory" value="{{i.Category}}" type="text" class="form-control"></td>
+                    </tr>
+               
+            <tr>
+                <td></td>
+                <td><button type="submit" class="btn btn-danger">DELETE</button></td>
+            </tr>
+            {% endfor %}
+            
+
+             </table>
+            </form>
+             {% endif %}
+                
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

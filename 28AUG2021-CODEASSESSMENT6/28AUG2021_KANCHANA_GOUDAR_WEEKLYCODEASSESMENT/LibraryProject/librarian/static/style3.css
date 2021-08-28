@@ -1,0 +1,85 @@
+
+body{
+    /* background-image: url(https://cdn.wallpapersafari.com/13/57/SAbPyt.jpg); */
+    /* background-image: url(https://thumbs.dreamstime.com/b/open-book-wood-table-over-green-light-background-45948748.jpg); */
+    background: url(https://tse4.mm.bing.net/th?id=OIP.X-SsjVIP5SutC60d9QDzvgHaE8&pid=Api&P=0&w=258&h=173);
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    
+    
+    table
+    {
+        /* border:2px solid lightblue; */
+        margin-top: 50px;
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+    
+    .views,.add{
+        padding:10px; 
+        margin-left:200px;
+        margin-right:200px;
+        margin-bottom:50px; 
+        text-align: center;
+        color: crimson;
+        text-shadow: 1px 1px white;
+        text-transform: uppercase;
+        font-weight: bold;
+        
+    }
+    
+    h6{
+    font-style: oblique;
+    color:blue;
+    }
+    td{
+        text-align: left;
+        color:crimson;
+        font-style: oblique;
+        font-size: larger;
+        font-weight: bold;
+    }
+    th{
+        text-align: center;
+        color:crimson;
+        font-weight: bolder;
+    }
+    
+        
+    h3{
+        padding:10px; 
+        margin-left:200px;
+        margin-right:200px;
+        text-align: center;
+        color: blue;
+        text-shadow: 1px 1px white;
+        
+        text-transform: uppercase; 
+    }
+    
+    button{
+        width: 250px;
+        height: 40px;
+    }
+    font{
+        font-size: larger;
+        font-weight: bold;   
+    }
+
+    /* .wrapper{
+        max-width: 400px;
+        
+        height: 40px;
+       
+        
+    }
+     */
+   /* h3{
+        position: relative;
+        white-space: nowrap;
+        -webkit-animation: rightThenLeft 4s linear;
+        overflow:hidden;
+    }  */
+
+  
