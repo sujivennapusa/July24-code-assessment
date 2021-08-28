@@ -1,0 +1,40 @@
+{% extends 'header.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+          <form action="http://127.0.0.1:8000/books/add/" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td>Book Name</td>
+                    <td><input name="book_name" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><input  name="author" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input  name="description" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input  name="price" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td><input  name="category" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-outline-secondary">REGISTER</button></center></td>
+                </tr>
+            </table>
+          </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>    
+{% endblock %}
+  

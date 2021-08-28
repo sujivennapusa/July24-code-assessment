@@ -1,0 +1,72 @@
+{% extends 'headerlib.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+        </div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            
+    
+            <form action="http://127.0.0.1:8000/librarian/delete_api/" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td>Librarian code</td>
+                    <td><input name="librarian_code" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center>
+                        <Button type="submit" class="btn btn-success">SEARCH</Button>
+                    </center></td>
+                </tr>
+            </table>
+
+          </form>
+          {% if data %}
+          <form action="http://127.0.0.1:8000/librarian/deletedata/" method="post">
+            <table class="table table-borderless">
+                  {% for i in data %}
+                  <tr>
+                      <td>ID</td>
+                      <td><input name="newid"value="{{i.id}}"type="hidden" class="form-control"></td>
+                  </tr>
+                  <tr>
+                      <td>Librarian Code</td>
+                      <td><input name="newlibrariancode"value="{{i.librarian_code}}"type="text" class="form-control"></td>
+                  </tr>
+                  <tr>
+                      <td>Name</td>
+                      <td><input name="newname"value="{{i.name}}" type="text" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <td>Address</td>
+                    <td><input name="newaddress"value="{{i.address}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><input name="newmobile"value="{{i.mobile}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td><input name="newpincode"value="{{i.pincode}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><input name="newemailid"value="{{i.emailid}}" type="text" class="form-control"></td>
+                </tr>
+                  <tr>
+                        <td> </td>
+                        <td>
+                              <center><Button type="submit" class="btn btn-success">DELETE</Button></center>
+                        </td>
+                  </tr>
+                  {% endfor %}
+              </table>
+          </form>
+          {% endif %}
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+
+{% endblock %}
