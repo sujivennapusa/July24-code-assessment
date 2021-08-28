@@ -1,0 +1,55 @@
+{%extends 'head.html'%}
+{%block myContent%}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 "></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xl-8 col-xxl-8">
+                
+                <form action="http://127.0.0.1:8000/faculty/search/" method="post">
+            <table class="table table-borderless">
+        <tr>
+            <td>F_CODE</td>
+            <td><input name="fcode" type="number" class="form-control"></td>
+        </tr>
+        
+        
+        <tr>
+            <td></td>
+            <td><Button type="submit" class="btn btn-success">SEARCH</Button></td>
+        </tr>
+    </table>
+    </form>
+    {% if data %}
+    <table class="table">
+     {% for i in data %}
+     <tr>
+        <td>F_CODE</td>
+        <td>{{i.fcode}}</td>
+    </tr>
+     <tr>
+         <td>NAME</td>
+         <td>{{i.name}}</td>
+     </tr>
+     
+    <tr>
+        <td>DEPARTMENT</td>
+        <td>{{i.dept}}</td>
+    </tr>
+    <tr>
+        <td>ADDRESS</td>
+        <td>{{i.address}}</td>
+    </tr>
+        <td>MOBILE_NO</td>
+        <td>{{i.mobileno}}</td>
+    </tr>
+    
+     {% endfor %}
+</table>
+    </div>
+    {% endif %}
+<div class="col-12 col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+ 
+</div>
+</div>   
+
+{%endblock%}

@@ -1,0 +1,57 @@
+{% extends 'header.html' %}
+{% block myContent %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 "></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xl-8 col-xxl-8">
+                
+        <form action="http://127.0.0.1:8000/student/add/" method="post">
+            <table class="table table-borderless">
+        <tr>
+            <td>NAME</td>
+            <td><input name="name" type="name" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>ADMIN_NO</td>
+            <td> <input name="admno" type="number" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>ROLL_NO</td>
+            <td> <input name="rollno" type="number" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>COLLEGE_NAME</td>
+            <td> <input name="college" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>PARENT_NAME</td>
+            <td> <input name="parentname" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td> MOBILE_NO </td>
+            <td> <input name="mobileno" type="number" class="form-control"></td>
+        </tr>
+        
+        <tr>
+            <td>DEPARTMENT</td>
+            <td> <input name="dept" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>TYPE</td>
+            <td>INDIAN<input name="TYPE" type="checkbox"  value="indian">
+                FOREIGNER<input name="TYPE" type="checkbox"  value="foreigner">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><Button type="submit" class="btn btn-success"> SUBMIT</Button></td>
+        </tr>
+    </form>
+    </table>
+    </div>
+<div class="col-12 col-2 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+ 
+</div>
+</div>   
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{%extends 'header.html'%}
+{%block myContent%}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 "></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xl-8 col-xxl-8">
+                
+                <form action="http://127.0.0.1:8000/student/deletesearch/" method="post">
+            <table class="table table-borderless">
+        <tr>
+            <td>ADMIN_NO</td>
+            <td><input name="admno" type="number" class="form-control"></td>
+        </tr>
+        
+        
+        <tr>
+            <td></td>
+            <td><Button type="submit" class="btn btn-success">SEARCH</Button></td>
+        </tr>
+    </table>
+    </form>
+    {% if data %}
+    <form action="http://127.0.0.1:8000/student/delete_action_api/" method="post">
+    <table class="table">
+       
+     {% for i in data %}
+     <tr>
+        <td></td>
+        <td> <input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+    </tr>
+     <tr>
+         <td>NAME</td>
+         <td> <input name="newname" value="{{i.name}}" type="text" class="form-control"></td>
+     </tr>
+     <tr>
+        <td>ADMIN_NO</td>
+        <td> <input name="newadmno" value="{{i.admno}}" type="number" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>ROLL_NO</td>
+        <td> <input name="newrollno" value="{{i.rollno}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>COLLEGE_NAME</td>
+        <td> <input name="newcollege" value="{{i.college}}" type="text" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>PARENT_NAME</td>
+        <td> <input name="newparentname" value="{{i.parentname}}" type="text" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>MOBILE_NO</td>
+        <td> <input name="newmobileno" value="{{i.mobileno}}" type="number" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>DEPARTMENT</td>
+        <td> <input name="newdept" value="{{i.dept}}" type="text" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><Button type="submit" class="btn btn-success">DELETE</Button></td>
+    </tr>
+     {% endfor %}
+    </form>
+</table>
+    </div>
+    {% endif %}
+<div class="col-12 col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+ 
+</div>
+</div>   
+
+{%endblock%}

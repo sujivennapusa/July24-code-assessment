@@ -1,0 +1,40 @@
+{% extends 'head.html'%}
+
+{% block myContent %}
+
+<h1> VIEWALL FACULTY DETAILS </h1>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 "></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xl-8 col-xxl-8">
+            <table class="table">
+    <thead class="table table-warning">
+    <tr>
+        <th>F_CODE</th>
+        <th>NAME</th>
+        <th>DEPARTMENT</th>
+        <th>ADDRESS</th>
+        <th>MOBILE_NO</th>
+    </tr>   
+
+    
+</thead>
+<tbody>
+    {% for i in data %}
+    <tr>
+        <td>{{i.fcode}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.dept}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.mobileno}}</td>
+    </tr>
+    {% endfor %}
+
+</tbody>
+
+</table>
+</div>
+
+    <div class="col-12 col-2 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+</div>
+{%endblock%}

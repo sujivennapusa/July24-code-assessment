@@ -1,0 +1,8 @@
+body{
+    background: linear-gradient(#8e9eab,#eef2f3);
+    height: 100vh;
+  }
+  h1{
+    background-color:aqua;
+    color:black;
+  }
