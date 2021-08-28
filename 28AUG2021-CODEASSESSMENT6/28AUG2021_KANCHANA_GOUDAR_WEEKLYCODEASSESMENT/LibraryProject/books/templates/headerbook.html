@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style1.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+</head>
+<body >
+  <br><br>
+  <h3 align="center" style="color:crimson">WELCOME TO LIBRARY MANAGEMENT</h3>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h5 style="color:white">WELCOME</h5></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#"><h5 ></h5></a>
+              <a class="nav-link" href="../add/"><h5 style="color:white">ADD</h5></a>
+              <a class="nav-link" href="../views/"><h5 style="color:white">VIEW </h5></a> 
+              <a class="nav-link" href="../search/"><h5 style="color:white">SEARCH</h5></a>
+              <a class="nav-link" href="../update/"><h5 style="color:white">UPDATE</h5></a>
+              <a class="nav-link" href="../delete/"><h5 style="color:white">DELETE</h5></a>  
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <br><br>
+{% block MyContent %}
+
+{% endblock %}
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

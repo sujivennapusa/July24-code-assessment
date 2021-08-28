@@ -1,0 +1,85 @@
+
+body{
+    /* background-image: url(https://cdn.wallpapersafari.com/13/57/SAbPyt.jpg); */
+    /* background-image: url(https://png.pngtree.com/back_origin_pic/04/36/35/e64d4d2bb196ed6b5d20d5d7dfd44bc3.jpg); */
+    background: url(https://s-media-cache-ak0.pinimg.com/originals/27/de/ba/27deba2c89d9bd0a09947c121dc39c10.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    
+    
+    table
+    {
+        /* border:2px solid lightblue; */
+        margin-top: 50px;
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+    
+    .views,.add{
+        padding:10px; 
+        margin-left:200px;
+        margin-right:200px;
+        margin-bottom:50px; 
+        text-align: center;
+        color: crimson;
+        text-shadow: 1px 1px white;
+        text-transform: uppercase;
+        font-weight: bold;
+        
+    }
+    
+    h6{
+    font-style: oblique;
+    color:blue;
+    }
+    td{
+        text-align: left;
+        color:crimson;
+        font-style: oblique;
+        font-size: larger;
+        font-weight: bold;
+    }
+    th{
+        text-align: center;
+        color:crimson;
+        font-weight: bolder;
+    }
+    
+        
+    h3{
+        padding:10px; 
+        margin-left:200px;
+        margin-right:200px;
+        text-align: center;
+        color: blue;
+        text-shadow: 3px 3px white;
+        
+        text-transform: uppercase; 
+    }
+    
+    button{
+        width: 250px;
+        height: 40px;
+    }
+    font{
+        font-size: larger;
+        font-weight: bold;   
+    }
+
+    /* .wrapper{
+        max-width: 400px;
+        
+        height: 40px;
+       
+        
+    }
+     */
+    /* .marquee {
+        position: relative;
+        white-space: nowrap;
+        -webkit-animation: rightThenLeft 4s linear;
+        overflow:hidden;
+    } */
+
+  
