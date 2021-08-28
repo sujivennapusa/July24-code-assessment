@@ -1,0 +1,59 @@
+{% extends 'headings.html' %}
+{% block mycontent %}
+
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <center>
+                <h2>REGISTER</h2>
+            </center>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+             
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+      
+         <form action="http://127.0.0.1:8000/doctors/adddoctor/" method="post">
+          <table class="table table-borderless table-striped">
+              <tr>
+                  <td>Doctor Code</td>
+                  <td><input name="dcode" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Doctor Name</td>
+                  <td><input pattern="^([a-z]+)( [a-z]+)*( [a-z]+)*$" name="dname" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Doctor address</td>
+                  <td><input name="daddress" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Mobile</td>
+                  <td><input name="dmobile" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Specialization</td>
+                  <td><input name="dspecial" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Doctor Email</td>
+                  <td><input name="demail" type="text" class="form-control" required></td>
+              </tr>
+              
+          
+              <tr>
+                  <td></td>
+                  <td><button class="btn btn-success">REGISTER</button></td>
+              </tr>
+          </table>  </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>
+
+    
+{% endblock  %}
