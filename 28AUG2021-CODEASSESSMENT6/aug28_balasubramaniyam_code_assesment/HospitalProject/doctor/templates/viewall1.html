@@ -1,0 +1,36 @@
+{% extends 'welcome1.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-striped">
+                <center><h2>VIEW ALL DOCTOR LIST</h2></center>
+            <thead>
+                <tr>
+                    <th> Doctor Code</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Specialisation </th>
+                    <th>Email</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>{{i.doc_code}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.address}}</td>
+                    <td>{{i.mobile }}</td>
+                    <td>{{i.specialisation}}</td>
+                    <td>{{i.email}}</td>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+{% endblock %}
