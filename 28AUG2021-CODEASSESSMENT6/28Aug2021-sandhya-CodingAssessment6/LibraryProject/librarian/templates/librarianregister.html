@@ -1,0 +1,44 @@
+{% extends 'headerlib.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+          <form action="http://127.0.0.1:8000/librarian/add/" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td>Librarian Code</td>
+                    <td><input name="librarian_code" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input  name="name" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input  name="address" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><input  name="mobile" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td><input  name="pincode" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Email id</td>
+                    <td><input  name="emailid" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-outline-secondary">REGISTER</button></center></td>
+                </tr>
+            </table>
+          </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>    
+{% endblock %}
+  
