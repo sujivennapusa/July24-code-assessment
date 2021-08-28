@@ -1,0 +1,47 @@
+{% extends 'welcome.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            
+            <form action="../add/" method="post">
+            <table class="table">
+                <table class="borderless">
+                   <h2>REGISTRATION FORM</h2>
+                    <tr>
+                        <td>Patient Code</td>
+                        <td><input name="pat_code" type="number" class="form-control" required></td>
+                    </tr>
+              <tr>
+                  <td>Name</td>
+                  <td><input name="name" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Address</td>
+                  <td><input name="address" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Email</td>
+                  <td><input name="email" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Phone</td>
+                  <td><input name="phone" type="number" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Pincode</td>
+                  <td><input name="pincode" type="number" class="form-control" required></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                <center> <Button class="btn btn-success">Submit</Button> </center></td>
+            </tr>
+            </table>
+        </form>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+{% endblock %}
