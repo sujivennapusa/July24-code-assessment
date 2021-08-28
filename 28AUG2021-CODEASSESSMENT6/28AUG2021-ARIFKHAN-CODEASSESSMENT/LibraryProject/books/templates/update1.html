@@ -1,0 +1,71 @@
+{% extends 'header1.html'  %} 
+
+{%  block myContent  %}
+<body style="background-color: blue;">
+    <center><h1 style="color:blue;">Update Book</h1></center>
+<form action="http://127.0.0.1:8000/books/updatesearch/" method="post">
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>bookname</td>
+                    <td><input name="bookname" type="text" class="form-control" ></td>
+            
+                
+                    <td></td>
+                    <td><center><button type="submit" class="btn-success form-control">SEARCH</center</button></td>
+                </tr>
+            </table>
+        </form>
+            {% if data %} 
+            <form action="http://127.0.0.1:8000/books/update_action_api/" method="post">
+<table class="table">
+    {% for i in data %} 
+    <tr>
+        <td></td>
+        <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>bookname</td>
+        <td><input name="newbookname" value="{{i.bookname}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>author</td>
+        <td><input name="newauthor" value="{{i.author}}" type="text" class="form-control"></td>
+    </tr>
+    
+    <tr>
+        <td>description</td>
+        <td><input name="newdescription" value="{{i.description}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>price</td>
+        <td><input name="newprice" value="{{i.price}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>category</td>
+        <td><input name="newcategory" value="{{i.category}}" type="text" class="form-control"></td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <td><button type="submit" class="btn btn-warning">UPDATE</button></td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+{% endif %}
+
+
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    </div>
+</div>
+</body>
+{% endblock %}
+
+

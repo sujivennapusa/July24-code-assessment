@@ -1,0 +1,6 @@
+body.hbody{
+    /* background-image:url('/static/.jpg');  */
+   background:linear-gradient(#e1eec3,#f05053); 
+   height: 100vh; 
+
+}
