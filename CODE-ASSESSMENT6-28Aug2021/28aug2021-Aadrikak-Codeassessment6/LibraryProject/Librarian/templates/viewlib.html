@@ -1,0 +1,51 @@
+{% extends 'header.html' %}
+{% block mycontent %}
+<div class="container">
+  <div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <center>
+            <h2 class="viewf">VIEW RECORDS</h2>
+        </center>
+        </div>
+    </div>
+</div>
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+    <h2>Registered Librarians</h2>
+<table class="table table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>Librarians Code</th>
+      <th>Librarians name</th>
+      <th>Address</th>
+      <th>Mobile</th>
+      <th>Pincode</th>
+      <th>Email</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in data %}
+    <tr>
+      <td> {{ i.lcode }}</td>
+      <td>{{ i.lname}}</td>
+      <td>{{ i.ladd }}</td>
+      <td>{{ i.lmob }}</td>
+      <td>{{ i.lpincode }}</td>
+      <td>{{ i.lemail }}</td>
+      
+
+      </tr>
+      {% endfor %}
+  </tbody>
+</table> </div>
+<div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+</div>
+</div>
+  </div>
+</div>
+      {% endblock  %}

@@ -1,0 +1,66 @@
+{% extends 'headings.html'  %} 
+
+{%  block mycontent  %}
+<form action="http://127.0.0.1:8000/books/deletesearch/" method="post">
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+          <center><h2><u>DELETE RECORDS</u></h2></center>
+         <table class="table table-borderless">
+                <tr>
+                    <td>Book name</td>
+                    <td><input name="bname" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn btn-success">Search</button></td>
+                </tr>
+                
+            </table></form>
+            {% if data %} 
+            <form action="http://127.0.0.1:8000/books/delete_action_api/" method="post">
+<table class="table table-borderless">
+    {% for i in data %} 
+    <tr>
+        <td></td>
+        <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>Book name</td>
+        <td><input name="newbname" value="{{i.bname}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Author Name</td>
+        <td><input name="newbauthor" value="{{i.bauthor}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Book Description</td>
+        <td><input name="newbdescp" value="{{i.bdescp}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Book Price</td>
+        <td><input name="newbprice" value="{{i.bprice}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Category</td>
+        <td><input name="newbcategory" value="{{i.bcategory}}" type="text" class="form-control"></td>
+    </tr>
+    
+        <td></td>
+        <td><button type="submit" class="btn btn-danger">DELETE</button></td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+{% endif %}
+
+
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    </div>
+</div>
+{% endblock %}
+
+

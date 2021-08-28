@@ -1,0 +1,49 @@
+{% extends 'headings1.html' %}
+{% block mycontent %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+    <CEnter><h1>
+      VIEW RECORDS
+    </h1></CEnter>
+    <h2 class="fonts">Registered Patient List</h2>
+<table  class="table table-striped">
+  <thead class="table-primary">
+    <tr >
+      <th> Patient Code</th>
+      <th>Patient Name</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Pincode</th>
+
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in data %}
+    <tr >
+      <td > {{ i.pcode }}</td>
+      <td >{{ i.pname}}</td>
+      <td >{{ i.paddress }}</td>
+      <td >{{ i.pemail }}</td>
+      <td >{{ i.pphone }}</td>
+      <td >{{ i.ppincode }}</td>
+      <td >{{ i.username }}</td>
+
+      </tr>
+      {% endfor %}
+  </tbody>
+</table> </div>
+<div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+
+
+
+</div>
+</div>
+  </div>
+</div>
+      {% endblock  %}
