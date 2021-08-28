@@ -1,0 +1,43 @@
+{% extends 'header.html'  %} 
+
+{%  block myContent  %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <table class="table table-striped">
+                    <thead class="table-warning">
+                        <tr>
+                            <th>Name</th>
+                            <th>Addmissionnumber</th>
+                            <th>Rollno</th>
+                            <th>College</th>
+                            <th>Parentname</th>
+                            <th>Mobilenumber</th>
+                            <th>Department</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in data %}
+                        <tr>
+                            
+                            <td>{{i.name}}</td>
+                            <td>{{i.admnno}}</td>
+                            <td>{{i.rollno}}</td>
+                            <td>{{i.college}}</td>
+                            <td>{{i.parentname}}</td>
+                            <td>{{i.mobilenumber}}</td>
+                            <td>{{i.department1}}</td>
+                            
+                        </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                </table>
+                <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+        </div>
+    </div>
+{% endblock  %}    
+    

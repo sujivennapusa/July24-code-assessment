@@ -1,0 +1,64 @@
+
+{% extends 'header.html'  %} 
+
+{%  block myContent  %}
+<form action="http://127.0.0.1:8000/student/search1/" method="post">
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>Admno</td>
+                    <td><input name="admnno" type="number" class="form-control"></td>
+                </tr>
+                
+                    <td></td>
+                    <td><center><button type="submit" class="btn-success form-control">SEARCH</center</button></td>
+                </tr>
+            </table>
+            {% if data %} 
+<table class="table table-borderless">
+    {% for i in data %} 
+    <tr>
+        <td>Name</td>
+        <td>{{i.name}}</td>
+    </tr>
+    <tr>
+        <td>Admnno</td>
+        <td>{{i.admnno}}</td>
+    </tr>
+    <tr>
+        <td>rollno</td>
+        <td>{{i.rollno}}</td>
+    </tr>
+    <tr>
+        <td>College</td>
+        <td>{{i.college}}</td>
+    </tr>
+    <tr>
+        <td>Department</td>
+        <td>{{i.department1}}</td>
+    </tr>
+    <tr>
+        <td>Parentname</td>
+        <td>{{i.parentname}}</td>
+    </tr>
+    <tr>
+        <td>MobileNumber</td>
+        <td>{{i.mobilenumber}}</td>
+    </tr>
+    
+    {% endfor %}
+</table>
+{% endif %}
+
+{% endblock  %} 
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    </div>
+</div>
+</form>
+
