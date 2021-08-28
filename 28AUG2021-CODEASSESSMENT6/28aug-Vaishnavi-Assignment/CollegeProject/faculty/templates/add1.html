@@ -1,0 +1,82 @@
+{% extends 'header.html' %} 
+{% block y %} 
+    
+
+<style>
+    
+     body{
+         background:radial-gradient(#00d9ff,#3f4bf4); 
+         height: 100vh;
+         font-family: serif; 
+         text-shadow: 0 0 0.5px #1900ff, 0 0 0.5px #8c00ff;
+     }
+
+     h1{
+    
+    text-shadow: 0 0 3px #1900ff, 0 0 5px #8c00ff;
+   
+    font-family: serif;
+   }
+   
+    .table{
+   text-shadow: 2px 2px 8px #ff00ff;
+   font-family: serif;
+   font-family: sans-serif;
+}
+
+
+
+</style>
+
+<h1 align="center" <font color="white"><b>ADD DETAILS</font></h1>
+    
+
+
+    <div class="container">
+        <div class="row" >
+            <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+            </div>
+            <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <div class="watermark">
+                
+               </div>
+                
+                <form action="http://127.0.0.1:8000/faculty/add/" method="POST">
+                <table class="table table-borderless">
+                    
+                    <tr>
+                        <td><b><font color="white">FACULTY CODE </font></td>
+                        <td><input name="faculty_code" placeholder="FACULTY CODE" type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><b><font color="white">NAME</font></td>
+                        <td><input name="name" placeholder="NAME" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><b><font color="white">DEPARTMENT</font></td>
+                        <td><input name="department" placeholder="DEPARTMENT" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><b><font color="white">ADDRESS</font></td>
+                        <td><input name="address" placeholder="ADDRESS" type="text" class="form-control"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><b><font color="white">MOBILE NO</font></td>
+                        <td><input name="mobilenumber" placeholder="Mobile Number" type="text" class="form-control"></td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td></td>
+                        <td align="center"><button class="btn btn-info"><b>REGISTER</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        </div>  
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                </div>
+    </div>
+           
+{% endblock   %}

@@ -1,0 +1,108 @@
+{% extends 'header.html' %} 
+
+{% block y %} 
+
+
+
+<style>
+    body{
+        
+        background:radial-gradient(#00d9ff,#3f4bf4); 
+         height: 100vh;
+         font-family: serif; 
+         text-shadow: 0 0 0.5px #1900ff, 0 0 0.5px #8c00ff;
+        
+    }
+    h1 {
+        text-shadow: 0 0 3px #1900ff, 0 0 5px #8c00ff;
+   
+   font-family: serif;
+}
+    .table{
+   text-shadow: 2px 2px 8px #00d9ff;
+   font-family: serif;
+   font-family: sans-serif;
+}
+
+
+
+
+</style>
+
+
+
+
+<h1 align="center" <font color="green">DELETE DETAILS </h1>
+<div class="container">
+    <div class="row">
+        <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+        </div>
+        <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+           <form action="http://127.0.0.1:8000/faculty/apideletee/" method="POST">
+            <table class="table table-borderless">
+                <tr>
+                    <td><b>FACULTY CODE</td>
+                    <td><input name="faculty_code" type="number" class="form-control"></td>
+                </tr>
+                
+                
+                <tr>
+                    <td></td>
+                    <td align="center"><button type="submit" class="btn btn-info">SEARCH</button></td>
+                </tr>
+            </table>
+        </form>
+
+            {% if data %} 
+            <form action="http://127.0.0.1:8000/faculty/deletee/" method="POST">
+
+            <table class="table table-borderless table-striped">
+                {% for i in data %}
+               
+                <tr>
+                    <td><b></td>
+                    <td><input name="id" placeholder="id" type="hidden" value="{{i.id}}" class="form-control" readonly ></td>
+                </tr>
+                
+                <tr>
+                    <td><b>FACULTY CODE </td>
+                    <td><input name="faculty_code" placeholder="FACULTY CODE" value="{{i.faculty_code}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><b>NAME</td>
+                    <td><input name="name" placeholder="NAME" value="{{i.name}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><b>DEPARTMENT</td>
+                    <td><input name="department" placeholder="DEPARTMENT" value="{{i.department}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><b>ADDRESS</td>
+                    <td><input name="address" placeholder="ADDRESS" value="{{i.address}}" type="text" class="form-control"></td>
+                </tr>
+                
+                <tr>
+                    <td><b>MOBILE NO</td>
+                    <td><input name="mobilenumber" placeholder="Mobile Number" value="{{i.mobilenumber}}" type="text" class="form-control"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button class="btn btn-danger">DELETE</button></td>
+                </tr>
+
+
+                {% endfor %} 
+            </table>
+        </form>
+
+           {% endif %}
+
+    </div>
+    </div>  
+            <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+            </div>
+</div>
+
+{% endblock    %}
+    
