@@ -1,0 +1,69 @@
+{% extends 'header.html' %}
+
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3"></div>
+        <div class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <form action="http://127.0.0.1:8000/student/updateapi/" method="post">
+                <table class="table table-borderless">
+                    <tr>
+                        <td>Admno</td>
+                        <td><input name="admno" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><center><Button type="submit" class="btn btn-info">Search</Button></center></td>
+                    </tr>
+                </table>
+    
+            </form>
+            {% if data %}
+                 <form action="http://127.0.0.1:8000/student/updateread/" method="post">
+                    <table class="table table-borderless">
+                        {% for i in data %}
+                        <tr>
+                          <td>Id</td>
+                          <td><input name="newid" value="{{ i.id }}" type="hidden" class="form-control"></td>
+                      </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td><input name="newsname" value="{{ i.sname }}" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>Roll no</td>
+                          <td><input name="newrollno" value="{{ i.rollno }}" type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                          <td>Admission No</td>
+                          <td><input name="newadmno" value="{{ i.admno }}" type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                          <td>College</td>
+                          <td><input name="newcollege" value="{{ i.college }}" type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                          <td>Parent</td>
+                          <td><input name="newparent" value="{{ i.parent }}" type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                          <td>Mobileno</td>
+                          <td><input name="newmobileno" value="{{ i.mobileno }}" type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                          <td>Department</td>
+                          <td><input name="newdepartment" value="{{ i.department }}" type="text" class="form-control"></td>
+                      </tr>
+                      {% endfor %}
+                      <tr>
+                          <td></td>
+                          <td><center><Button type="submit" class="btn btn-info">Update</Button></center></td>
+                    </tr>
+                    </table>
+                 </form>
+                  {% endif %}
+        </div>
+        <div class="col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3"></div>
+    </div>
+</div>
+{% endblock %}
